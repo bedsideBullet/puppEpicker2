@@ -13,9 +13,17 @@ const deleteDogRequest = () => {
   // fill out method
 };
 
-const patchFavoriteForDog = () => {
-  // fill out method
-};
+const patchFavoriteForDog = (dog: Dog) => {
+  return fetch(`${baseUrl}/dogs/${dog.id}`, {
+    body: JSON.stringify(dog),
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json",
+    },
+  }).then((response) => {
+    response.json;
+  });
+}
 
 export const Requests = {
   postDog,

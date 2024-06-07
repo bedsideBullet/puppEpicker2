@@ -1,4 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
+import { DogsContext } from "../Providers/DogsProvider";
+import { ActiveTab } from "../types";
 
 export const Section = ({
   label,
@@ -8,6 +10,15 @@ export const Section = ({
   label: string;
   children: ReactNode;
 }) => {
+
+  const {favoritedDogs, unFavoritedDogs, activeTab, setActiveTab} = useContext(DogsContext)
+
+  const setTab = (tabName: ActiveTab) => {
+    activeTab !== tabName
+      ? setActiveTab(tabName)
+      : setActiveTab("none")
+  }
+
   return (
     <section id="main-section">
       <div className="container-header">
@@ -15,27 +26,27 @@ export const Section = ({
         <div className="selectors">
           {/* This should display the favorited count */}
           <div
-            className={`selector ${"active"}`}
+            className={`selector ${activeTab === "favorited" ? "active" : ""}`}
             onClick={() => {
-              alert("click favorited");
+              setTab("favorited");
             }}
           >
-            favorited ( {0} )
+            favorited ( {favoritedDogs.length} )
           </div>
 
           {/* This should display the unfavorited count */}
           <div
-            className={`selector ${""}`}
+            className={`selector ${activeTab === "unfavorited" ? "active" : ""}`}
             onClick={() => {
-              alert("click unfavorited");
+              setTab("unfavorited");
             }}
           >
-            unfavorited ( {10} )
+            unfavorited ( {unFavoritedDogs.length} )
           </div>
           <div
-            className={`selector ${""}`}
+            className={`selector ${activeTab === "create" ? "active" : ""}`}
             onClick={() => {
-              alert("clicked create dog");
+              setTab("create");
             }}
           >
             create dog

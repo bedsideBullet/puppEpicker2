@@ -1,24 +1,24 @@
 import { useContext } from "react";
 import { DogsContext } from "../Providers/DogsProvider";
 import { DogCard } from "./DogCard";
-import { Dog } from "../types";
+import { ActiveTab, Dog } from "../types";
 import { Requests } from "../api";
 
 export const Dogs = () => {
-  const { allDogs, isLoading, setIsLoading, setAllDogs } =
+  const { allDogs, isLoading, setIsLoading, refetchDogs, favoritedDogs, unFavoritedDogs, activeTab } =
     useContext(DogsContext);
     
 
-  const favoriteClick = (dog: Dog) => {
-    setIsLoading(true);
-    const updatedDog = { ...dog, isFavorite: !dog.isFavorite };
-
-    return Requests.patchFavoriteForDog(updatedDog)
-      .then(() => {
-        Requests.getAllDogs().then(setAllDogs);
-      }).catch(() => alert("Failed"))
-      .finally(() => setIsLoading(false));
-  };
+    const favoriteClick = (dog: Dog) => {
+      setIsLoading(true);
+      const updatedDog = { ...dog, isFavorite: !dog.isFavorite };
+  
+      return Requests.patchFavoriteForDog(updatedDog)
+        .then(() => {
+          refetchDogs()
+        })
+        .finally(() => setIsLoading(false));
+    };
 
   // const deleteDog = (dogId: number) => {
   //   setIsLoading(true);
@@ -29,9 +29,16 @@ export const Dogs = () => {
   //     .finally(() => setIsLoading(false));
   // };
 
+  const filteredDogs: Record<ActiveTab, Dog[]> = {
+    "none": allDogs,
+    favorited: favoritedDogs,
+    unfavorited: unFavoritedDogs,
+    "create": []
+  };
+
   return (
     <>
-      {allDogs.map((dog: Dog) => (
+      {filteredDogs[activeTab].map((dog: Dog) => (
         <DogCard
           key={dog.id}
           dog={dog}

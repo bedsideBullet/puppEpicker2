@@ -1,1 +1,144 @@
-{"dogs":[{"name":"Francisca","image":"/assets/dalmation.png","description":"application Identity North Customizable abbreviation Grocery Jaguar","isFavorite":true,"id":0},{"name":"Maybelle","image":"/assets/blue-heeler.png","description":"Trigender killer synergies Saudi Borders Avon grow","isFavorite":false,"id":1},{"name":"Buck","image":"/assets/blue-heeler.png","description":"gold redundant New ubiquitous neat Account Data tan","isFavorite":true,"id":2},{"name":"Autumn","image":"/assets/dalmation.png","description":"Honda intuitive Berkshire Bicycle Cotton","isFavorite":true,"id":3},{"name":"Retta","image":"/assets/cowardly.png","description":"Automotive Ergonomic Howe synergize standardization barring protocol","isFavorite":false,"id":4},{"name":"Johathan","image":"/assets/dalmation.png","description":"Argon torn Dirham Hybrid Bicycle maroon hopelessly","isFavorite":true,"id":5},{"name":"Jacinthe","image":"/assets/cowardly.png","description":"Van Administrator Global Identity black","isFavorite":false,"id":6},{"name":"Blaze","image":"/assets/cowardly.png","description":"Architect optical homely Dynamic Handcrafted","isFavorite":true,"id":7},{"name":"Brock","image":"/assets/dalmation.png","description":"Cambridgeshire Chicken Communications Southwest command female reunify Technician","isFavorite":true,"id":8},{"name":"Esteban","image":"/assets/corgi.png","description":"ample protocol Toyota Northwest Metal","isFavorite":false,"id":9},{"name":"Derek","image":"/assets/dalmation.png","description":"Intelligent haptic standardization Account capability","isFavorite":false,"id":10},{"name":"Amara","image":"/assets/cowardly.png","description":"neaten Industrial volt haptic East worth South among","isFavorite":true,"id":11},{"name":"Henri","image":"/assets/corgi.png","description":"Touring lumen Fantastic magnetic Northwest Crest whiteboard South","isFavorite":false,"id":12},{"name":"Rogelio","image":"/assets/boxer.png","description":"West withdrawal pink after circuit voluptatum transmit American","isFavorite":true,"id":13},{"name":"Noel","image":"/assets/boxer.png","description":"Country community an deposit technologies pitcher Fantastic","isFavorite":true,"id":14},{"name":"Collin","image":"/assets/boxer.png","description":"Female male Fresh lest microchip","isFavorite":false,"id":15},{"name":"Anais","image":"/assets/dalmation.png","description":"secondary Salad Hyundai overload SMS","isFavorite":true,"id":16},{"name":"Nasir","image":"/assets/corgi.png","description":"Manat Implementation quantifying synthesize light","isFavorite":true,"id":17},{"name":"Nina","image":"/assets/blue-heeler.png","description":"yahoo quantifying solution Reunion South","isFavorite":false,"id":18},{"name":"Stevie","image":"/assets/cowardly.png","description":"katal Electric Bicycle mmm Intranet connecting Berkshire","isFavorite":false,"id":19}]}
+{
+  "dogs": [
+    {
+      "name": "Francisca",
+      "image": "/assets/dalmation.png",
+      "description": "application Identity North Customizable abbreviation Grocery Jaguar",
+      "isFavorite": true,
+      "id": 0
+    },
+    {
+      "name": "Maybelle",
+      "image": "/assets/blue-heeler.png",
+      "description": "Trigender killer synergies Saudi Borders Avon grow",
+      "isFavorite": false,
+      "id": 1
+    },
+    {
+      "name": "Buck",
+      "image": "/assets/blue-heeler.png",
+      "description": "gold redundant New ubiquitous neat Account Data tan",
+      "isFavorite": true,
+      "id": 2
+    },
+    {
+      "name": "Autumn",
+      "image": "/assets/dalmation.png",
+      "description": "Honda intuitive Berkshire Bicycle Cotton",
+      "isFavorite": true,
+      "id": 3
+    },
+    {
+      "name": "Retta",
+      "image": "/assets/cowardly.png",
+      "description": "Automotive Ergonomic Howe synergize standardization barring protocol",
+      "isFavorite": true,
+      "id": 4
+    },
+    {
+      "name": "Johathan",
+      "image": "/assets/dalmation.png",
+      "description": "Argon torn Dirham Hybrid Bicycle maroon hopelessly",
+      "isFavorite": true,
+      "id": 5
+    },
+    {
+      "name": "Jacinthe",
+      "image": "/assets/cowardly.png",
+      "description": "Van Administrator Global Identity black",
+      "isFavorite": false,
+      "id": 6
+    },
+    {
+      "name": "Blaze",
+      "image": "/assets/cowardly.png",
+      "description": "Architect optical homely Dynamic Handcrafted",
+      "isFavorite": true,
+      "id": 7
+    },
+    {
+      "name": "Brock",
+      "image": "/assets/dalmation.png",
+      "description": "Cambridgeshire Chicken Communications Southwest command female reunify Technician",
+      "isFavorite": true,
+      "id": 8
+    },
+    {
+      "name": "Esteban",
+      "image": "/assets/corgi.png",
+      "description": "ample protocol Toyota Northwest Metal",
+      "isFavorite": false,
+      "id": 9
+    },
+    {
+      "name": "Derek",
+      "image": "/assets/dalmation.png",
+      "description": "Intelligent haptic standardization Account capability",
+      "isFavorite": false,
+      "id": 10
+    },
+    {
+      "name": "Amara",
+      "image": "/assets/cowardly.png",
+      "description": "neaten Industrial volt haptic East worth South among",
+      "isFavorite": true,
+      "id": 11
+    },
+    {
+      "name": "Henri",
+      "image": "/assets/corgi.png",
+      "description": "Touring lumen Fantastic magnetic Northwest Crest whiteboard South",
+      "isFavorite": false,
+      "id": 12
+    },
+    {
+      "name": "Rogelio",
+      "image": "/assets/boxer.png",
+      "description": "West withdrawal pink after circuit voluptatum transmit American",
+      "isFavorite": true,
+      "id": 13
+    },
+    {
+      "name": "Noel",
+      "image": "/assets/boxer.png",
+      "description": "Country community an deposit technologies pitcher Fantastic",
+      "isFavorite": true,
+      "id": 14
+    },
+    {
+      "name": "Collin",
+      "image": "/assets/boxer.png",
+      "description": "Female male Fresh lest microchip",
+      "isFavorite": false,
+      "id": 15
+    },
+    {
+      "name": "Anais",
+      "image": "/assets/dalmation.png",
+      "description": "secondary Salad Hyundai overload SMS",
+      "isFavorite": true,
+      "id": 16
+    },
+    {
+      "name": "Nasir",
+      "image": "/assets/corgi.png",
+      "description": "Manat Implementation quantifying synthesize light",
+      "isFavorite": true,
+      "id": 17
+    },
+    {
+      "name": "Nina",
+      "image": "/assets/blue-heeler.png",
+      "description": "yahoo quantifying solution Reunion South",
+      "isFavorite": false,
+      "id": 18
+    },
+    {
+      "name": "Stevie",
+      "image": "/assets/cowardly.png",
+      "description": "katal Electric Bicycle mmm Intranet connecting Berkshire",
+      "isFavorite": false,
+      "id": 19
+    }
+  ]
+}
