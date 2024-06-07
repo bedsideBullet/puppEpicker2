@@ -1,13 +1,6 @@
 {
   "dogs": [
     {
-      "name": "Francisca",
-      "image": "/assets/dalmation.png",
-      "description": "application Identity North Customizable abbreviation Grocery Jaguar",
-      "isFavorite": true,
-      "id": 0
-    },
-    {
       "name": "Maybelle",
       "image": "/assets/blue-heeler.png",
       "description": "Trigender killer synergies Saudi Borders Avon grow",

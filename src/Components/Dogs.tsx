@@ -20,14 +20,14 @@ export const Dogs = () => {
         .finally(() => setIsLoading(false));
     };
 
-  // const deleteDog = (dogId: number) => {
-  //   setIsLoading(true);
-  //   return Requests.deleteDog(dogId)
-  //     .then(() => {
-  //       refetchDogs()
-  //     })
-  //     .finally(() => setIsLoading(false));
-  // };
+  const deleteDog = (dogId: number) => {
+    setIsLoading(true);
+    return Requests.deleteDogRequest(dogId)
+      .then(() => {
+        refetchDogs()
+      })
+      .finally(() => setIsLoading(false));
+  };
 
   const filteredDogs: Record<ActiveTab, Dog[]> = {
     "none": allDogs,
@@ -49,7 +49,9 @@ export const Dogs = () => {
           onHeartClick={() => {
             favoriteClick(dog);
           }}
-          onTrashIconClick={() => {}}
+          onTrashIconClick={() => {
+            deleteDog(dog.id)
+          }}
         />
       ))}
     </>

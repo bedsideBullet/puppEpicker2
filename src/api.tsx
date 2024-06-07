@@ -6,12 +6,25 @@ const getAllDogs = (): Promise<Dog[]> => {
   return fetch(`${baseUrl}/dogs`).then((response) => response.json())
 };
 
-const postDog = () => {
-  // fill out method
+const postDog = (dog: Omit<Dog, "id">): Promise<Dog> => {
+  return fetch(`${baseUrl}/dogs`, {
+    body: JSON.stringify(dog),
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((response) => response.json());
 };
-const deleteDogRequest = () => {
-  // fill out method
-};
+const deleteDogRequest = (dogId: number): Promise<void> => {
+  return fetch(`${baseUrl}/dogs/${dogId}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((response) => {
+    response.json();
+  });
+}
 
 const patchFavoriteForDog = (dog: Dog) => {
   return fetch(`${baseUrl}/dogs/${dog.id}`, {
