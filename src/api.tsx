@@ -1,9 +1,9 @@
 import { Dog } from "./types";
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "http://localhost:3000";
 
 const getAllDogs = (): Promise<Dog[]> => {
-  return fetch(`${baseUrl}/dogs`).then((response) => response.json())
+  return fetch(`${baseUrl}/dogs`).then((response) => response.json());
 };
 
 const postDog = (dog: Omit<Dog, "id">): Promise<Dog> => {
@@ -24,7 +24,7 @@ const deleteDogRequest = (dogId: number): Promise<void> => {
   }).then((response) => {
     response.json();
   });
-}
+};
 
 const patchFavoriteForDog = (dog: Dog) => {
   return fetch(`${baseUrl}/dogs/${dog.id}`, {
@@ -36,7 +36,7 @@ const patchFavoriteForDog = (dog: Dog) => {
   }).then((response) => {
     response.json;
   });
-}
+};
 
 export const Requests = {
   postDog,

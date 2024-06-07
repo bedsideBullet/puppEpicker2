@@ -5,35 +5,42 @@ import { ActiveTab, Dog } from "../types";
 import { Requests } from "../api";
 
 export const Dogs = () => {
-  const { allDogs, isLoading, setIsLoading, refetchDogs, favoritedDogs, unFavoritedDogs, activeTab } =
-    useContext(DogsContext);
-    
+  const {
+    allDogs,
+    setAllDogs,
+    isLoading,
+    favoritedDogs,
+    unFavoritedDogs,
+    activeTab,
+  } = useContext(DogsContext);
 
-    const favoriteClick = (dog: Dog) => {
-      setIsLoading(true);
-      const updatedDog = { ...dog, isFavorite: !dog.isFavorite };
-  
-      return Requests.patchFavoriteForDog(updatedDog)
-        .then(() => {
-          refetchDogs()
-        })
-        .finally(() => setIsLoading(false));
-    };
+  const favoriteClick = (dog: Dog) => {
+    const updatedDogs = allDogs.map((d) =>
+      d.id === dog.id ? { ...d, isFavorite: !d.isFavorite } : d
+    );
+    setAllDogs(updatedDogs);
+
+    Requests.patchFavoriteForDog({ ...dog, isFavorite: !dog.isFavorite }).catch(
+      () => {
+        setAllDogs(allDogs);
+      }
+    );
+  };
 
   const deleteDog = (dogId: number) => {
-    setIsLoading(true);
-    return Requests.deleteDogRequest(dogId)
-      .then(() => {
-        refetchDogs()
-      })
-      .finally(() => setIsLoading(false));
+    const updatedDogs = allDogs.filter((dog) => dog.id !== dogId);
+    setAllDogs(updatedDogs);
+
+    Requests.deleteDogRequest(dogId).catch(() => {
+      setAllDogs(allDogs);
+    });
   };
 
   const filteredDogs: Record<ActiveTab, Dog[]> = {
-    "none": allDogs,
+    none: allDogs,
     favorited: favoritedDogs,
     unfavorited: unFavoritedDogs,
-    "create": []
+    create: [],
   };
 
   return (
@@ -50,7 +57,7 @@ export const Dogs = () => {
             favoriteClick(dog);
           }}
           onTrashIconClick={() => {
-            deleteDog(dog.id)
+            deleteDog(dog.id);
           }}
         />
       ))}

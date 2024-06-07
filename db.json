@@ -1,74 +1,11 @@
 {
   "dogs": [
     {
-      "name": "Maybelle",
-      "image": "/assets/blue-heeler.png",
-      "description": "Trigender killer synergies Saudi Borders Avon grow",
-      "isFavorite": false,
-      "id": 1
-    },
-    {
       "name": "Buck",
       "image": "/assets/blue-heeler.png",
       "description": "gold redundant New ubiquitous neat Account Data tan",
       "isFavorite": true,
       "id": 2
-    },
-    {
-      "name": "Autumn",
-      "image": "/assets/dalmation.png",
-      "description": "Honda intuitive Berkshire Bicycle Cotton",
-      "isFavorite": true,
-      "id": 3
-    },
-    {
-      "name": "Retta",
-      "image": "/assets/cowardly.png",
-      "description": "Automotive Ergonomic Howe synergize standardization barring protocol",
-      "isFavorite": true,
-      "id": 4
-    },
-    {
-      "name": "Johathan",
-      "image": "/assets/dalmation.png",
-      "description": "Argon torn Dirham Hybrid Bicycle maroon hopelessly",
-      "isFavorite": true,
-      "id": 5
-    },
-    {
-      "name": "Jacinthe",
-      "image": "/assets/cowardly.png",
-      "description": "Van Administrator Global Identity black",
-      "isFavorite": false,
-      "id": 6
-    },
-    {
-      "name": "Blaze",
-      "image": "/assets/cowardly.png",
-      "description": "Architect optical homely Dynamic Handcrafted",
-      "isFavorite": true,
-      "id": 7
-    },
-    {
-      "name": "Brock",
-      "image": "/assets/dalmation.png",
-      "description": "Cambridgeshire Chicken Communications Southwest command female reunify Technician",
-      "isFavorite": true,
-      "id": 8
-    },
-    {
-      "name": "Esteban",
-      "image": "/assets/corgi.png",
-      "description": "ample protocol Toyota Northwest Metal",
-      "isFavorite": false,
-      "id": 9
-    },
-    {
-      "name": "Derek",
-      "image": "/assets/dalmation.png",
-      "description": "Intelligent haptic standardization Account capability",
-      "isFavorite": false,
-      "id": 10
     },
     {
       "name": "Amara",
@@ -106,13 +43,6 @@
       "id": 15
     },
     {
-      "name": "Anais",
-      "image": "/assets/dalmation.png",
-      "description": "secondary Salad Hyundai overload SMS",
-      "isFavorite": true,
-      "id": 16
-    },
-    {
       "name": "Nasir",
       "image": "/assets/corgi.png",
       "description": "Manat Implementation quantifying synthesize light",
@@ -132,6 +62,27 @@
       "description": "katal Electric Bicycle mmm Intranet connecting Berkshire",
       "isFavorite": false,
       "id": 19
+    },
+    {
+      "name": "asd",
+      "description": "asdsf",
+      "image": "/assets/chihuahua.avif",
+      "isFavorite": false,
+      "id": 20
+    },
+    {
+      "name": "asdasf",
+      "description": "asdfasf",
+      "image": "/assets/boxer.jpeg",
+      "isFavorite": false,
+      "id": 21
+    },
+    {
+      "name": "asdas",
+      "description": "asdasf",
+      "image": "/assets/dalmation.png",
+      "isFavorite": false,
+      "id": 22
     }
   ]
 }
