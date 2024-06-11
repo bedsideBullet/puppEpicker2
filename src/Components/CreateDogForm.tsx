@@ -1,21 +1,19 @@
 import { useContext, useState } from "react";
 import { dogPictures } from "../dog-pictures";
 import { DogsContext } from "../Providers/DogsProvider";
-import { Dog } from "../types";
-import { Requests } from "../api";
-import toast from "react-hot-toast";
+
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
 export const CreateDogForm = () =>
   // no props allowed
   {
-    const { refetchDogs } = useContext(DogsContext);
+    
     const [selectedImage, setSelectedImage] = useState(defaultSelectedImage);
     const [dogName, setDogName] = useState<string>("");
     const [dogDescription, setDogDescription] = useState<string>("");
 
-    const { isLoading, setIsLoading } = useContext(DogsContext);
+    const { isLoading, createDog } = useContext(DogsContext);
 
     const reset = () => {
       setDogName("");
@@ -23,17 +21,7 @@ export const CreateDogForm = () =>
       setSelectedImage(defaultSelectedImage);
     };
 
-    const createDog = (dog: Omit<Dog, "id">) => {
-      setIsLoading(true);
-      return Requests.postDog(dog)
-        .then(() => refetchDogs())
-        .then(() => {
-          toast.success("Whoa dog, you just created a new dog! 🐶");
-        })
-        .finally(() => {
-          setIsLoading(false);
-        });
-    };
+    
 
     const handleSubmit = (event: React.FormEvent) => {
       event.preventDefault();

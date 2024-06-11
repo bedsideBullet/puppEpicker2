@@ -1,6 +1,5 @@
 import { ReactNode, useContext } from "react";
 import { DogsContext } from "../Providers/DogsProvider";
-import { ActiveTab } from "../types";
 
 export const Section = ({
   label,
@@ -11,13 +10,9 @@ export const Section = ({
   children: ReactNode;
 }) => {
 
-  const {favoritedDogs, unFavoritedDogs, activeTab, setActiveTab} = useContext(DogsContext)
+  const { activeTab, setTab, filteredDogs} = useContext(DogsContext)
 
-  const setTab = (tabName: ActiveTab) => {
-    activeTab !== tabName
-      ? setActiveTab(tabName)
-      : setActiveTab("none")
-  }
+  
 
   return (
     <section id="main-section">
@@ -31,7 +26,7 @@ export const Section = ({
               setTab("favorited");
             }}
           >
-            favorited ( {favoritedDogs.length} )
+            favorited ( {filteredDogs["favorited"].length} )
           </div>
 
           {/* This should display the unfavorited count */}
@@ -41,7 +36,7 @@ export const Section = ({
               setTab("unfavorited");
             }}
           >
-            unfavorited ( {unFavoritedDogs.length} )
+            unfavorited ( {filteredDogs["unfavorited"].length} )
           </div>
           <div
             className={`selector ${activeTab === "create" ? "active" : ""}`}

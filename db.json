@@ -18,7 +18,7 @@
       "name": "Henri",
       "image": "/assets/corgi.png",
       "description": "Touring lumen Fantastic magnetic Northwest Crest whiteboard South",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 12
     },
     {
@@ -27,13 +27,6 @@
       "description": "West withdrawal pink after circuit voluptatum transmit American",
       "isFavorite": true,
       "id": 13
-    },
-    {
-      "name": "Noel",
-      "image": "/assets/boxer.png",
-      "description": "Country community an deposit technologies pitcher Fantastic",
-      "isFavorite": true,
-      "id": 14
     },
     {
       "name": "Collin",
@@ -83,6 +76,13 @@
       "image": "/assets/dalmation.png",
       "isFavorite": false,
       "id": 22
+    },
+    {
+      "name": "dsdg",
+      "description": "asdfasdas",
+      "image": "/assets/chihuahua.avif",
+      "isFavorite": false,
+      "id": 23
     }
   ]
 }

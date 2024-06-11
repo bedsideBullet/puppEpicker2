@@ -14,8 +14,8 @@ export function App() {
         <h1>pup-e-picker (Functional)</h1>
       </header>
       <Section label={"Dogs: "}>
-      {(activeTab !== "create" ? <Dogs /> :
-      <CreateDogForm />)}
+      {(activeTab !== "create" && <Dogs />)}
+      {(activeTab === "create" && <CreateDogForm />)}
       </Section>
     </div>
   );
